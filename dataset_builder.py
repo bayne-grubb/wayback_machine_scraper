@@ -15,8 +15,7 @@ urls = ["www.bloomberg.com", "www.barrons.com", "www.wsj.com"]
 
 driver_path = '/home/bayne/Documents/rich-face-detector/chromedriver'
 target_path = '.'
-df = pd.DataFrame()
-for news_source in news_sources:
+for news_source in urls:
     break
     folder_name = news_source.split(".")[1]
     for year in years:
@@ -85,7 +84,6 @@ def get_directories():
 for website in get_directories():
     os.chdir(website)
     for year in get_directories():
-        break
         os.chdir(year)
         for month in get_directories():
             month_path = os.path.join(month, "{}.json".format(month))
